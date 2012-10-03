@@ -7,12 +7,15 @@
 //
 
 #include <iostream>
+#include "init.h"
 
 int main(int argc, const char * argv[])
 {
 
-    // insert code here...
-    std::cout << "Hello Road!\n";
+    Init(argc, *argv);
+    
+    
+    
     return 0;
 }
 

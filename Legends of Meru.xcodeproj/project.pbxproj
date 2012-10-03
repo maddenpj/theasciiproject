@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		74934C0A16195A6C00640ED3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74934C0916195A6C00640ED3 /* main.cpp */; };
+		74934C381619800F00640ED3 /* init.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74934C361619800F00640ED3 /* init.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,6 +43,8 @@
 		74934C3116196A8000640ED3 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.md; sourceTree = "<group>"; };
 		74934C3216196A9E00640ED3 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.md; sourceTree = "<group>"; };
 		74934C3316196AAE00640ED3 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.md; sourceTree = "<group>"; };
+		74934C361619800F00640ED3 /* init.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = init.cpp; sourceTree = "<group>"; };
+		74934C39161980F500640ED3 /* init.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = init.h; sourceTree = "<group>"; };
 		74F939E61619570F005ABFBC /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				74934C3216196A9E00640ED3 /* Readme.md */,
+				74934C39161980F500640ED3 /* init.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -103,8 +107,9 @@
 		74934C0816195A6C00640ED3 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				74934C0916195A6C00640ED3 /* main.cpp */,
 				74934C3316196AAE00640ED3 /* Readme.md */,
+				74934C0916195A6C00640ED3 /* main.cpp */,
+				74934C361619800F00640ED3 /* init.cpp */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -231,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74934C0A16195A6C00640ED3 /* main.cpp in Sources */,
+				74934C381619800F00640ED3 /* init.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,7 +247,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -273,6 +279,7 @@
 					"-lboost_regex-mt",
 				);
 				SDKROOT = macosx;
+				STRINGS_FILE_OUTPUT_ENCODING = "UTF-8";
 			};
 			name = Debug;
 		};
@@ -280,7 +287,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -296,6 +303,7 @@
 				HEADER_SEARCH_PATHS = /usr/local/include;
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-lboost_system-mt",
 					"-lboost_program_options-mt",
@@ -305,6 +313,7 @@
 					"-lboost_regex-mt",
 				);
 				SDKROOT = macosx;
+				STRINGS_FILE_OUTPUT_ENCODING = "UTF-8";
 			};
 			name = Release;
 		};
