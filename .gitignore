@@ -19,9 +19,16 @@
 *.dat
 *.idx
 *.emp
+*.glb
+*.tlm
 
-# Netbeans stuff 
-/nbproject/private/
+# We don't want to keep uploading logs
+*.log
 
-# Emacs Stuff
-*#
+# automake stuff I don't want to export
+config.h
+config.log
+config.status
+libtool
+Makefile
+stamp-h1
